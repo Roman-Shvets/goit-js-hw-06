@@ -1,7 +1,10 @@
-const ulEl = document.querySelectorAll('li.item');
-console.log('Number of categories:', ulEl.length);
-const h2El = document.querySelectorAll('h2');
-for (let i = 0; i < h2El.length; i += 1) {
-    console.log('Category:', h2El[i].textContent);
-    console.log('Elements:', ulEl[i].querySelectorAll('li').length);
+const ulEl = document.querySelector('#categories');
+
+console.log('Number of categories:', ulEl.children.length);
+console.log('');
+
+for (let i = 0; i < ulEl.children.length; i += 1) {
+console.log('Category:', ulEl.children[i].firstElementChild.textContent);
+console.log('Elements:', ulEl.children[i].lastElementChild.children.length);
+console.log('');
 }

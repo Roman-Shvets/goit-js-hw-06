@@ -14,15 +14,8 @@ const images = [
 ];
 
 const ulEl = document.querySelector(".gallery");
-ulEl.classList.add("gallery__items")
-const elements = [];
+ulEl.classList.add("gallery__items");
 
-for (let i = 0; i < images.length; i += 1) {
+const imageSet = images.map((image) => `<li> <img src= ${image.url} alt= ${image.alt} > </li>`).join("");
 
-  const liEl = document.createElement('li');
-  liEl.insertAdjacentHTML("afterBegin", `<img src= ${images[i].url} alt= ${images[i].alt} >`);
-  elements.push(liEl);
-}
-
-ulEl.append(...elements);
-
+ulEl.insertAdjacentHTML("afterend", imageSet);

@@ -11,7 +11,9 @@ if (email.value === "" || password.value === "") {
 return alert("Поля форми повинні бути заповнені");
 }
 
-console.log(`Email: ${email.value}, Password: ${password.value}`);
-event.currentTarget.reset();    
-   
+console.log("Об'єкт із введеними даними:", event);
+console.log("Email:", event.currentTarget.elements.email.value);
+console.log("Password:", event.currentTarget.elements.password.value);
+
+event.currentTarget.reset();
 }
